@@ -1,0 +1,19 @@
+{
+  "name": "web3-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "abi-decoder": "^2.4.0",
+    "ethereum-input-data-decoder": "^0.4.1",
+    "ethereum-multicall": "^2.10.0",
+    "ethereum-tx-decoder": "^3.0.0",
+    "ethereumjs-abi": "^0.6.8",
+    "web3": "^1.7.1"
+  }
+}

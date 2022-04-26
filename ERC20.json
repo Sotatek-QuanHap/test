@@ -1,0 +1,52 @@
+[
+    {
+        "inputs": [
+            { "internalType": "uint256", "name": "_gameInterval", "type": "uint256" },
+            { "internalType": "address", "name": "_gameInstanceImp", "type": "address" },
+            { "internalType": "address", "name": "vrfCoord", "type": "address" },
+            { "internalType": "address", "name": "linkAddr", "type": "address" },
+            { "internalType": "bytes32", "name": "_keyHash", "type": "bytes32" }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            { "indexed": true, "internalType": "address", "name": "newGame", "type": "address" },
+            { "indexed": false, "internalType": "uint256", "name": "time", "type": "uint256" }
+        ],
+        "name": "NewGame",
+        "type": "event"
+    },
+    { "anonymous": false, "inputs": [{ "indexed": false, "internalType": "uint256", "name": "gameInterval", "type": "uint256" }], "name": "NewGameInterval", "type": "event" },
+    { "inputs": [{ "internalType": "uint256", "name": "newInterval", "type": "uint256" }], "name": "changeGameInterval", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+    {
+        "inputs": [{ "internalType": "bytes", "name": "", "type": "bytes" }],
+        "name": "checkUpkeep",
+        "outputs": [
+            { "internalType": "bool", "name": "upkeepNeeded", "type": "bool" },
+            { "internalType": "bytes", "name": "", "type": "bytes" }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    { "inputs": [], "name": "currentGame", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" },
+    { "inputs": [], "name": "gameInstanceImp", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" },
+    { "inputs": [], "name": "gameInterval", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" },
+    { "inputs": [], "name": "getRandomNumber", "outputs": [{ "internalType": "bytes32", "name": "requestId", "type": "bytes32" }], "stateMutability": "nonpayable", "type": "function" },
+    { "inputs": [], "name": "lastTimeStamp", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" },
+    { "inputs": [{ "internalType": "bytes", "name": "", "type": "bytes" }], "name": "performUpkeep", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+    { "inputs": [], "name": "randomResult", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" },
+    {
+        "inputs": [
+            { "internalType": "bytes32", "name": "requestId", "type": "bytes32" },
+            { "internalType": "uint256", "name": "randomness", "type": "uint256" }
+        ],
+        "name": "rawFulfillRandomness",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    { "inputs": [], "name": "requestID", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }
+]
